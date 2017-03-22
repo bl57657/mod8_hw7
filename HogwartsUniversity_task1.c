@@ -38,8 +38,6 @@ int main(int argc, char *argv[])
 	show_arr(target3);
 	return 0;
 }
-
-
 /* Function Defenitions */
 void copy_arr(double ar1[], const double ar2[], int n)
 {
@@ -50,7 +48,6 @@ void copy_arr(double ar1[], const double ar2[], int n)
 	}
 	return;
 }
-
 void copy_ptr(double *ar1, const double *ar2, int n)
 {
 	int i;
@@ -62,26 +59,22 @@ void copy_ptr(double *ar1, const double *ar2, int n)
 	}
 	return;
 }
-//void copy_ptrs(double *ar2, const double *start, const double *end)
-//{
-//	double *start 0 = start;
-//	while (start0 != start5)
-//	{
-//	--start5;
-//	*ar1 = *start;
-//	ar1++;
-//	start++;
-//	}
-//	return;
-//}
-
+void copy_ptrs(double *ar2, const double *start, const double *end)
+{
+	while(start != end)
+	{
+		*(ar2++) = *(start++);
+	}
+	return;
+}
 void show_arr(const double ar[])
 {
 	int i;
 	for(i=0; i < 5; ++i)
 	{
-		printf("%f \n", ar[i]);
+		printf("%3.1f ", ar[i]);
 	}
+	printf("\n");
 	return;
 }
 
